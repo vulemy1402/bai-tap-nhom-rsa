@@ -1,0 +1,3 @@
+Lệnh: python main.py number --p 17 --q 11 --e 2 --message 88
+Lỗi: Không tồn tại nghịch đảo: gcd(a, modulo) != 1.
+Exit code: 1 (đúng kỳ vọng)

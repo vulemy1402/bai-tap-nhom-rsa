@@ -1,0 +1,4 @@
+bytes,encrypt_seconds,decrypt_seconds,match
+1024,0.000404,0.006279,True
+4096,0.001260,0.025792,True
+16384,0.004587,0.094679,True

@@ -1,0 +1,37 @@
+n=512 bit; gốc=1783 byte; bản mã=1936 byte
+Mã hoá=0.001391s; giải mã CRT=0.010362s; KHỚP TỪNG BYTE=True
+Đã xuất khoá, encrypted.rsa và restored.bin vào <thu_muc_demo_tam>/demo
+
+THỜI GIAN THỰC HIỆN
+  Sinh và kiểm tra khoá: 0.098840693 giây (98.840693 ms)
+  Mã hoá: 0.001391404 giây (1.391404 ms)
+  Giải mã CRT: 0.010362209 giây (10.362209 ms)
+  Tổng thời gian xử lý: 0.110594306 giây (110.594306 ms)
+  Đo bằng perf_counter; không tính chờ nhập, đọc/ghi tệp và in kết quả.
+encrypt: 1783 -> 1936 byte, 0.000515s
+
+THỜI GIAN THỰC HIỆN
+  Mã hoá: 0.000515230 giây (0.515230 ms)
+  Tổng thời gian xử lý: 0.000515230 giây (0.515230 ms)
+  Đo bằng perf_counter; không tính chờ nhập, đọc/ghi tệp và in kết quả.
+decrypt: 1936 -> 1783 byte, 0.010056s
+
+THỜI GIAN THỰC HIỆN
+  Giải mã CRT: 0.010055955 giây (10.055955 ms)
+  Tổng thời gian xử lý: 0.010055955 giây (10.055955 ms)
+  Đo bằng perf_counter; không tính chờ nhập, đọc/ghi tệp và in kết quả.
+Nhập bản rõ UTF-8: Bản mã (hex, gồm header): 5253414c41423100000000000000001ed29f2559ffae78ab8265c76b41befad0ba39772c750672ff7fc645aad496e194026883d64cc67909366318e4ef5340cbf0506375c37e485f308b9394b8eb2ea51bd631b2f6617397c125a721dcd86932a8ee8da33b19da1c634cc08105f3e75df4b802f5936a24fe0e43da4ddc897653a4131fc0d16eb67430b9f40b50b2d78b
+Giải mã: Kiểm tra đo thời gian RSA
+KHỚP=True; mã hoá=0.000026s; giải mã=0.000319s
+
+THỜI GIAN THỰC HIỆN
+  Mã hoá: 0.000026350 giây (0.026350 ms)
+  Giải mã CRT: 0.000318803 giây (0.318803 ms)
+  Tổng thời gian xử lý: 0.000345153 giây (0.345153 ms)
+  Đo bằng perf_counter; không tính chờ nhập, đọc/ghi tệp và in kết quả.
+Đã sinh khoá 512 bit vào <thu_muc_demo_tam>/keys
+
+THỜI GIAN THỰC HIỆN
+  Sinh và kiểm tra khoá: 0.084554025 giây (84.554025 ms)
+  Tổng thời gian xử lý: 0.084554025 giây (84.554025 ms)
+  Đo bằng perf_counter; không tính chờ nhập, đọc/ghi tệp và in kết quả.

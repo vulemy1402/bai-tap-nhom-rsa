@@ -1,0 +1,32 @@
+p=17; q=11; n=187; phi=160
+KU=(e=7, n=187); KR=(d=23, p=17, q=11)
+Miller–Rabin: n=17, n-1=2^s*d
+  n=17 | s=4 | d=1 | base=2 | sequence=[2, 4, 16] | passed=True
+Miller–Rabin: n=11, n-1=2^s*d
+  n=11 | s=1 | d=5 | base=2 | sequence=[10] | passed=True
+Euclid: r0=q*r1+remainder; theo dõi hệ số Bezout
+  r0=7 | r1=160 | q=0 | remainder=7 | x0=1 | x1=0 | y0=0 | y1=1
+  r0=160 | r1=7 | q=22 | remainder=6 | x0=0 | x1=1 | y0=1 | y1=0
+  r0=7 | r1=6 | q=1 | remainder=1 | x0=1 | x1=-22 | y0=0 | y1=1
+  r0=6 | r1=1 | q=6 | remainder=0 | x0=-22 | x1=23 | y0=1 | y1=-1
+Mã hoá: bit từ trái sang phải; squared=before² mod n
+  step=1 | bit=1 | before=1 | squared=1 | result=88
+  step=2 | bit=1 | before=88 | squared=77 | result=44
+  step=3 | bit=1 | before=44 | squared=66 | result=11
+Giải mã: nhân base nếu bit=1
+  step=1 | bit=1 | before=1 | squared=1 | result=11
+  step=2 | bit=0 | before=11 | squared=121 | result=121
+  step=3 | bit=1 | before=121 | squared=55 | result=44
+  step=4 | bit=1 | before=44 | squared=66 | result=165
+  step=5 | bit=1 | before=165 | squared=110 | result=88
+Giải mã CRT
+  dp=7 | dq=3 | mp=3 | mq=0 | q_inverse=14 | h=8 | result=88
+M=88 -> C=11 -> M'=88; CRT=88; KHỚP=True
+
+THỜI GIAN THỰC HIỆN
+  Tạo và kiểm tra khoá: 0.000645646 giây (0.645646 ms)
+  Mã hoá: 0.000005418 giây (0.005418 ms)
+  Giải mã trực tiếp: 0.000003415 giây (0.003415 ms)
+  Giải mã CRT: 0.000004968 giây (0.004968 ms)
+  Tổng thời gian xử lý: 0.000659447 giây (0.659447 ms)
+  Đo bằng perf_counter; không tính chờ nhập, đọc/ghi tệp và in kết quả.

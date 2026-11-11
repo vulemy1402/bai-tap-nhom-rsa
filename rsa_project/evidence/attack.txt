@@ -1,0 +1,10 @@
+{
+  "message": 88,
+  "ciphertext": 11,
+  "factor": 2,
+  "changed_ciphertext": 99,
+  "recovered": 176,
+  "expected": 176
+}
+C' = C × r^e mod n -> giải mã thành M×r mod n.
+Bản mã bị sửa vẫn giải mã được: RSA textbook không xác thực thông điệp.

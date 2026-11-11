@@ -1,0 +1,35 @@
+
+[TC01 — SLIDE] p=17, q=11, e=7, M=88
+  Kỳ vọng: n=187, d=23, C=11, M'=88
+  Thực tế: n=187, d=23, C=11, M'=88 => PASS
+
+[TC02 — TỰ LÀM] p=61, q=53, e=17, M=65
+  Kỳ vọng: n=3233, d=2753, C=2790, M'=65
+  Thực tế: n=3233, d=2753, C=2790, M'=65 => PASS
+
+[TC03 — LỖI] p=17, q=11, e=2; phi=160; gcd(2,160)=2
+  Kỳ vọng: từ chối tạo khoá, báo ValueError không tồn tại nghịch đảo
+  Thực tế: Không tồn tại nghịch đảo: gcd(a, modulo) != 1. => PASS (bắt đúng lỗi mong đợi)
+
+=== ĐỐI CHIẾU THƯ VIỆN CHUẨN (tách khỏi TC01–TC03) ===
+[math.gcd] 6 cặp và đồng nhất thức Bezout: PASS
+[pow(a,-1,n)] 4 nghịch đảo: PASS
+[pow(a,e,n)] 120 bộ số xác định: PASS
+[RSA với pow] M=88, C tự viết=11, C chuẩn=11, M'=88: PASS
+[RSA với pow] M=65, C tự viết=2790, C chuẩn=2790, M'=65: PASS
+[pow / trực tiếp / CRT] toàn bộ 187 đại diện, gồm bội của p,q: PASS
+[Chia thử độc lập] Miller–Rabin với 0..1999: PASS
+[RSA số lớn với pow] khoá sinh 512 bit, 6 bản rõ: PASS
+[So sánh byte gốc] UTF-8, byte 0, ranh giới khối và tệp thật: PASS
+KẾT QUẢ ĐỐI CHIẾU: TẤT CẢ KHỚP
+test_01_vi_du_slide (test_rsa.RSATests.test_01_vi_du_slide)
+TC01: trang 43–44, p=17,q=11,e=7,M=88. ... ok
+test_02_ca_tu_lam (test_rsa.RSATests.test_02_ca_tu_lam)
+TC02: bộ số ngoài ví dụ lớp, p=61,q=53,e=17,M=65. ... ok
+test_03_khoa_loi (test_rsa.RSATests.test_03_khoa_loi)
+TC03: e=2 không nguyên tố cùng nhau với phi=160. ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+OK

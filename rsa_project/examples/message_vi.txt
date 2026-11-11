@@ -1,0 +1,14 @@
+BÀI TẬP NHÓM: HỆ MÃ RSA
+Dữ liệu mẫu UTF-8 để kiểm tra mã hoá và giải mã một tệp văn bản thật.
+
+1. RSA dùng một cặp khoá công khai và khoá riêng. Người gửi sử dụng khoá công khai để mã hoá, còn người nhận dùng khoá riêng để giải mã. Trong bài tập này, các thuật toán được viết bằng Python và chạy trong Visual Studio Code.
+
+2. Euclid mở rộng tìm các hệ số Bezout. Khi hai số nguyên tố cùng nhau, hệ số thích hợp cho phép tính phần tử nghịch đảo modulo. Bình phương và nhân giúp tính luỹ thừa modulo mà không cần tạo số luỹ thừa khổng lồ trước khi chia dư.
+
+3. Miller–Rabin kiểm tra các ứng viên số nguyên tố qua nhiều cơ sở. Một cơ sở có thể bị số giả nguyên tố đánh lừa, vì vậy quá trình sinh khoá sử dụng nhiều vòng với cơ sở ngẫu nhiên độc lập.
+
+4. Tệp này có dấu tiếng Việt: ă â ê ô ơ ư đ, chữ hoa Ă Â Ê Ô Ơ Ư Đ, dấu câu và ký hiệu 🔐. Chương trình phải giữ nguyên mọi byte UTF-8, xuống dòng và khoảng trắng sau khi giải mã.
+
+5. Chia khối phải bảo đảm giá trị của mỗi khối nhỏ hơn modulo n. Độ dài gốc giúp khôi phục chính xác khối cuối và cả byte bằng không. Kết quả đối chiếu cần so sánh byte thay vì chỉ quan sát bằng mắt.
+
+6. Đây là mô hình RSA textbook phục vụ học tập. Bản mã không được đệm OAEP hoặc xác thực. Phần trình bày minh hoạ tính nhân giải thích vì sao chỉ áp dụng công thức RSA trực tiếp chưa tạo thành một hệ mã hoá an toàn để triển khai thực tế.
