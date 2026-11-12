@@ -15,7 +15,9 @@
       "type": "debugpy",
       "request": "launch",
       "program": "${workspaceFolder}/main.py",
-      "args": ["number"],
+      "args": [
+        "number"
+      ],
       "console": "integratedTerminal",
       "cwd": "${workspaceFolder}"
     },
@@ -24,9 +26,20 @@
       "type": "debugpy",
       "request": "launch",
       "program": "${workspaceFolder}/main.py",
-      "args": ["test"],
+      "args": [
+        "test"
+      ],
       "console": "integratedTerminal",
       "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "RSA: Giao diện web",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/web_app.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true
     }
   ]
 }

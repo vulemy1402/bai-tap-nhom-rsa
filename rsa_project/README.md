@@ -2,7 +2,28 @@
 
 Dự án Python chạy trực tiếp trong **Visual Studio Code**, gồm một chương trình RSA với dữ liệu số nguyên, văn bản UTF-8 và tệp nhị phân. Không tách phiên bản thu nhỏ. Ví dụ trong tài liệu lớp được giữ để kiểm chứng và minh hoạ từng bước.
 
-## 1. Mở và chạy bằng Visual Studio Code
+## Chạy giao diện web trong VS Code
+
+1. Giải nén, mở **File > Open Folder** và chọn thư mục `rsa_project`.
+2. Chọn Python 3.10 trở lên trong **Python: Select Interpreter**.
+3. Mở **Terminal > New Terminal**. Chạy:
+
+   ```bash
+   python web_app.py
+   ```
+
+   Trên Windows có thể dùng `py -3 web_app.py`. Trình duyệt sẽ tự mở. Nếu chưa mở, truy cập **http://127.0.0.1:8000/**. Giữ terminal đang chạy; nhấn `Ctrl+C` tại terminal để dừng. Nếu cổng đã bận: `python web_app.py --port 8001`, sau đó mở http://127.0.0.1:8001/.
+
+   Hoặc chọn **Run and Debug > RSA: Giao diện web**, nhấn F5.
+
+4. **Số nguyên**: mặc định theo slide p=17, q=11, e=7, M=88. Nhấn **Mã hoá & giải mã**; mở **Xem các bước trung gian** để thuyết trình.
+5. **Văn bản**: nhấn **Khoá văn bản** ở bên trái (p=61, q=53, e=17), chọn tab Văn bản, nhập nội dung, nhấn **Mã hoá văn bản** rồi **Giải mã bản mã**. Cũng có thể nhập các khoá khác hoặc nhấn **Tự sinh khoá 512 bit**.
+6. **Tệp dữ liệu**: chọn khoá văn bản hoặc sinh khoá; chọn tệp gốc nhỏ tối đa 1 MB; nhấn **Mã hoá & tải xuống**. Tiếp theo chọn tệp `.rsa` vừa tải xuống, giữ nguyên p,q,e và nhấn **Giải mã & tải xuống**. Tệp khôi phục sẽ có tên gốc, có thể kiểm tra byte bằng `fc /b` trên Windows. Lưu p,q,e nếu cần giải mã về sau.
+7. Tab **Kiểm thử** chạy đúng 3 ca chính và phần đối chiếu chuẩn. Thời gian tạo khoá, mã hoá, giải mã hoặc kiểm thử sẽ hiện ngay sau từng thao tác; tệp được đọc/tải qua trình duyệt nên thời gian này không tính thời gian chọn, đọc hoặc lưu tệp.
+
+Web chỉ chạy trên máy tại địa chỉ `127.0.0.1`, không triển khai lên Internet. Chương trình dùng `http.server`, không cần `pip install`. Không chia sẻ p,q,e khi sử dụng cho dữ liệu cần bảo mật; dự án RSA textbook không có OAEP và chỉ dùng để học. Nếu nhóm đã sửa mã nguồn trên GitHub, hãy phối hợp gộp thay đổi thay vì ghi đè bản mới nhất.
+
+## 1. Mở và chạy giao diện Terminal bằng Visual Studio Code
 
 1. Cài **Python 3.10 trở lên**. Trên Windows, bật **Add python.exe to PATH** khi cài.
 2. Giải nén bộ mã nguồn. Trong VS Code, chọn **File > Open Folder**, mở đúng thư mục `rsa_project` chứa `main.py`.
@@ -32,6 +53,8 @@ Trên Windows, nếu `python` không được nhận diện nhưng đã cài Pyt
 | `rsa_core/key_io.py` | Lưu/nạp khoá JSON |
 | `rsa_core/attacks.py` | Minh hoạ sửa bản mã nhờ tính nhân của RSA textbook |
 | `rsa_core/cli.py` | Menu, tham số dòng lệnh, đo thời gian, đọc/ghi và hiển thị |
+| `web_app.py` | Chạy web cục bộ, kết nối giao diện với lõi RSA |
+| `web/index.html`, `web/style.css`, `web/app.js` | Giao diện web và xử lý tương tác |
 | `tests/test_rsa.py` | Đúng 3 ca chính: slide, tự làm, lỗi |
 | `reference_checks.py` | Đối chiếu Python chuẩn và kiểm tra bổ sung, tách khỏi 3 ca chính |
 
