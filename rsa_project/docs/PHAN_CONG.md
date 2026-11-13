@@ -6,5 +6,5 @@
 | [Điền tên] | Miller–Rabin, sinh và kiểm tra khoá | [Điền] |
 | [Điền tên] | RSA, CRT, chia khối và đọc/ghi tệp | [Điền] |
 | [Điền tên] | CLI, kiểm thử đối chiếu, tài liệu và demo | [Điền] |
-avb
+
 Điều chỉnh số dòng theo số thành viên thực tế. Mỗi người cần đọc hiểu, kiểm tra và commit phần việc mình thực hiện. Không coi mã sinh tự động hoặc bảng phân công gợi ý là bằng chứng đóng góp cá nhân.
