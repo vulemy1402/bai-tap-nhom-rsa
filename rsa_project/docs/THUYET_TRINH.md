@@ -1,6 +1,7 @@
 # Ghi chú báo cáo và kịch bản thuyết trình
 
 ## 1. Ý tưởng RSA
+धन्यवाद्
 
 Chọn hai số nguyên tố lẻ phân biệt p,q; n=pq; phi(n)=(p-1)(q-1). Chọn e nguyên tố cùng nhau với phi(n), tính d=e^(-1) mod phi(n). Khoá công khai là (e,n); khoá riêng chứa d,p,q (dự án lưu thêm e,n để kiểm tra và tiện nạp).
 
