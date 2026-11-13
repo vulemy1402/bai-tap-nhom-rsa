@@ -5,7 +5,7 @@
 Chọn hai số nguyên tố lẻ phân biệt p,q; n=pq; phi(n)=(p-1)(q-1). Chọn e nguyên tố cùng nhau với phi(n), tính d=e^(-1) mod phi(n). Khoá công khai là (e,n); khoá riêng chứa d,p,q (dự án lưu thêm e,n để kiểm tra và tiện nạp).
 
 Mã hoá C=M^e mod n; giải mã M=C^d mod n, với 0<=M<n. Vì ed=1+k*phi(n), ta xét riêng theo p và q: nếu M chia hết p, cả hai vế đều bằng 0 modulo p; nếu không, dùng định lý Fermat và (p-1)|phi(n) để có M^(ed)=M mod p. Tương tự với q; CRT suy ra M^(ed)=M mod n. Lập luận này bao phủ cả trường hợp gcd(M,n)!=1, ví dụ M=88,n=187 của lớp.
-
+abcbcbabca
 ## 2. Thuật toán nền và độ phức tạp
 
 - **Euclid mở rộng:** cập nhật hai số dư và hai cặp hệ số Bezout qua mỗi phép chia. Khi số dư bằng 0, thu được g=ax+by. Số phép chia O(log min(|a|,|b|)) khi cả hai khác 0.
